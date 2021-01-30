@@ -2,7 +2,7 @@
 package control.actionListener;
 
 import control.Mainprog;
-import file.TestFile;
+import file.FileOperation;
 import view.AddProperty;
 import view.AgentHomePage;
 
@@ -37,7 +37,7 @@ public class NewPropertySaveButtonActionListener implements ActionListener {
             int postCode=Integer.parseInt(property.getPostCodeTextField().getText());
             ArrayList<File> image=property.getImages();
 
-            if (TestFile.addNewProperty(title, type, size, roomNo, bathRoomNo,price, description, address, city, postCode, image)) {
+            if (FileOperation.addNewProperty(title, type, size, roomNo, bathRoomNo,price, description, address, city, postCode, image)) {
                 JOptionPane.showMessageDialog(Mainprog.main, "Property has been add successfully ");
                 Mainprog.main.setSize(800, 442);
                 AgentHomePage agentHomePage = new AgentHomePage();

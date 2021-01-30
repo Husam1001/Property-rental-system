@@ -130,7 +130,7 @@ public class PropertyAd extends javax.swing.JPanel {
         deleteButton.setBackground(new java.awt.Color(255, 153, 153));
         deleteButton.setText("Delete");
         deleteButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        deleteButton.addActionListener(new DeletePropertyBtnActionListener());
+        deleteButton.addActionListener(new DeletePropertyBtnActionListener(property.getId()));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

@@ -24,5 +24,6 @@ public class ManagePropertyActionListener implements ActionListener {
         Mainprog.main.add(managePropertyHomePage);
         managePropertyHomePage.setVisible(true);
         System.out.println("works");
+
     }
 }
