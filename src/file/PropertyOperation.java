@@ -6,6 +6,7 @@ import modle.Property.Property;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -87,6 +88,55 @@ public class PropertyOperation {
         }
 
         return null;
+    }
+
+    public static boolean updateProperty(Property property){
+
+        File propertyFile=new File("src/file/property.txt");
+
+        File tempFile=new File("src/file/tempFile.txt");
+        String temp1,temp2;
+        Scanner read=null;
+
+        PrintWriter writer=null;
+
+        try {
+            writer=new PrintWriter(tempFile);
+             read=new Scanner(propertyFile);
+             read.useDelimiter("<>");
+        } catch (FileNotFoundException e) {
+
+            e.printStackTrace();
+
+        }
+       while (read.hasNext()){
+           temp1=read.next();
+           temp2=read.next();
+           if (!temp2.equals(String.valueOf(property.getId()))){
+               writer.println(temp1+"<>"+temp2+read.nextLine());
+              // writer.println(Session.getUser().getId() + "<>" + id + "<>" + title + "<>" + type + "<>" + size + "<>" + roomNo + "<>" + bathroomNo + "<>" + price + "<>" + description + "<>" + address + "<>" + city + "<>" + postCode + "<>");
+           }else {
+               writer.println(temp1 + "<>" + property.getId() + "<>" +
+                       property.getTitle() + "<>" +
+                       property.getPropertyType() + "<>" +
+                       property.getSize() + "<>" +
+                       property.getNumberOfRoom() + "<>" +
+                       property.getNumberOfBathroom() + "<>" +
+                       property.getPrice() + "<>" +
+                       property.getDescription() + "<>" +
+                       property.getPropertyLocation().getStreet() + "<>" +
+                       property.getPropertyLocation().getCity() + "<>" +
+                       property.getPropertyLocation().getPostCode() + "<>"
+               );
+               read.nextLine();
+           }
+       }
+
+        writer.close();
+        read.close();
+       propertyFile.delete();
+       tempFile.renameTo(propertyFile);
+        return true;
     }
 
 }

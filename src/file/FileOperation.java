@@ -1,6 +1,7 @@
 package file;
 
 import control.Session;
+import modle.Property.Property;
 import org.apache.commons.io.FileUtils;
 
 import java.io.*;
@@ -142,4 +143,6 @@ public class FileOperation {
         } else System.out.println("file not exist");
         return false;
     }
+
+
 }

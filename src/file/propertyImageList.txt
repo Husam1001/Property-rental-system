@@ -26,3 +26,5 @@
 177640<>src/assets/images/propertyImage/177640/Screenshot.png<>
 187978<>src/assets/images/propertyImage/187978/7.png<>
 599392<>src/assets/images/propertyImage/599392/4.png<>
+549329<>src/assets/images/propertyImage/549329/3.png<>src/assets/images/propertyImage/549329/Screenshot.png<>
+47701<>src/assets/images/propertyImage/47701/Screenshot.png<>

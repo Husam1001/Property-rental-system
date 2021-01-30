@@ -125,7 +125,7 @@ public class PropertyAd extends javax.swing.JPanel {
         updateButton.setText("Update");
         updateButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         updateButton.setMaximumSize(new java.awt.Dimension(56, 19));
-        updateButton.addActionListener(new UpdateBtnActionListener());
+        updateButton.addActionListener(new UpdateBtnActionListener(property));
 
         deleteButton.setBackground(new java.awt.Color(255, 153, 153));
         deleteButton.setText("Delete");

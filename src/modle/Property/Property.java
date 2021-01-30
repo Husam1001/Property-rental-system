@@ -98,6 +98,20 @@ public class Property {
     public ArrayList<String> getPropertyImages() {
         return propertyImages;
     }
+    public boolean compare(Property comparableProperty){
+        if (this.getId()!=comparableProperty.getId()) return false;
+        else if (!this.title.equals(comparableProperty.title)) return false;
+        else if (!this.propertyType.equals(comparableProperty.getPropertyType()))return false;
+        else if(!this.size.equals(comparableProperty.size))return false;
+        else if (!(this.NumberOfRoom ==comparableProperty.NumberOfRoom))return false;
+        else if (!(this.numberOfBathroom==comparableProperty.numberOfBathroom))return false;
+        else if (!(this.price==comparableProperty.price))return false;
+        else if(!this.description.equals(comparableProperty.description))return false;
+        else if (!this.getPropertyLocation().fullAddress.equals(comparableProperty.getPropertyLocation().fullAddress))return false;
+        else if (!this.getPropertyLocation().city.equals(comparableProperty.getPropertyLocation().city))return false;
+        else if (!(this.getPropertyLocation().postCode==comparableProperty.getPropertyLocation().postCode))return false;
+        else return true;
+    }
 
     public void setPropertyImages(ArrayList<String> propertyImages) {
         this.propertyImages = propertyImages;
