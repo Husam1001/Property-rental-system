@@ -2,7 +2,6 @@ package control.actionListener.managePropertyActionListener;
 
 import control.Mainprog;
 import modle.Property.Property;
-import view.AddProperty;
 import view.UpdatePropertyView;
 
 import java.awt.event.ActionEvent;
@@ -17,11 +16,11 @@ public class UpdateBtnActionListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         System.out.println("Update Btn");
         UpdatePropertyView updateProperty=new UpdatePropertyView(property);
-        Mainprog.main.setSize(550,700);
-        Mainprog.main.getContentPane().removeAll();
-        Mainprog.main.repaint();
-        Mainprog.main.setLocationRelativeTo(null);
-        Mainprog.main.add(updateProperty);
+        Mainprog.mainFrame.setSize(550,700);
+        Mainprog.mainFrame.getContentPane().removeAll();
+        Mainprog.mainFrame.repaint();
+        Mainprog.mainFrame.setLocationRelativeTo(null);
+        Mainprog.mainFrame.add(updateProperty);
         updateProperty.setVisible(true);
 
     }

@@ -1,4 +1,4 @@
-package file;
+package modle.fileOperation;
 
 import control.Session;
 import modle.Property.Address;
@@ -17,7 +17,7 @@ public class PropertyOperation {
 
     public static ArrayList<Property> getProperty() {
         ArrayList<Property> propertyList=new ArrayList<>();
-        File propertyFile = new File("src/file/property.txt");
+        File propertyFile = new File("src/assets/files/property.txt");
         int propertyId;
         String title;
         String type;
@@ -63,7 +63,7 @@ public class PropertyOperation {
     }
 
     private static ArrayList<String> getImageList(int id) {
-        File propertyImageListFile = new File("src/file/propertyImageList.txt");
+        File propertyImageListFile = new File("src/assets/files/propertyImageList.txt");
         ArrayList<String> imagePath = new ArrayList<>();
         Scanner read;
         try {
@@ -92,9 +92,9 @@ public class PropertyOperation {
 
     public static boolean updateProperty(Property property){
 
-        File propertyFile=new File("src/file/property.txt");
+        File propertyFile=new File("src/assets/files/property.txt");
 
-        File tempFile=new File("src/file/tempFile.txt");
+        File tempFile=new File("src/assets/files/tempFile.txt");
         String temp1,temp2;
         Scanner read=null;
 

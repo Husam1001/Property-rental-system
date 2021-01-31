@@ -1,41 +1,41 @@
 package control.actionListener.managePropertyActionListener;
 
-import view.PropertyAd;
+import view.PropertyDetailsWidget;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ImageSliderActionListener implements ActionListener {
-    PropertyAd propertyAd;
+    PropertyDetailsWidget propertyDetailsWidget;
 
-    public ImageSliderActionListener(PropertyAd propertyAd) {
-        this.propertyAd = propertyAd;
+    public ImageSliderActionListener(PropertyDetailsWidget propertyDetailsWidget) {
+        this.propertyDetailsWidget = propertyDetailsWidget;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton btn = (JButton) e.getSource();
         if (btn.getText().equals("<<")) {
-            if (propertyAd.getImageNo() > 0) {
-                propertyAd.previousImage();
-                propertyAd.getImageLabel().setIcon(propertyAd.getPropertyImageList().get(propertyAd.getImageNo()));
+            if (propertyDetailsWidget.getImageNo() > 0) {
+                propertyDetailsWidget.previousImage();
+                propertyDetailsWidget.getImageLabel().setIcon(propertyDetailsWidget.getPropertyImageList().get(propertyDetailsWidget.getImageNo()));
 
             } else {
-                propertyAd.setImageNo(propertyAd.getPropertyImageList().size() - 1);
-                propertyAd.getImageLabel().setIcon(propertyAd.getPropertyImageList().get(propertyAd.getImageNo()));
+                propertyDetailsWidget.setImageNo(propertyDetailsWidget.getPropertyImageList().size() - 1);
+                propertyDetailsWidget.getImageLabel().setIcon(propertyDetailsWidget.getPropertyImageList().get(propertyDetailsWidget.getImageNo()));
             }
 
         }
 
         if (btn.getText().equals(">>")) {
-            if (propertyAd.getImageNo() < propertyAd.getPropertyImageList().size() - 1) {
-                propertyAd.nextImage();
-                propertyAd.getImageLabel().setIcon(propertyAd.getPropertyImageList().get(propertyAd.getImageNo()));
+            if (propertyDetailsWidget.getImageNo() < propertyDetailsWidget.getPropertyImageList().size() - 1) {
+                propertyDetailsWidget.nextImage();
+                propertyDetailsWidget.getImageLabel().setIcon(propertyDetailsWidget.getPropertyImageList().get(propertyDetailsWidget.getImageNo()));
 
             } else {
-                propertyAd.setImageNo(0);
-                propertyAd.getImageLabel().setIcon(propertyAd.getPropertyImageList().get(propertyAd.getImageNo()));
+                propertyDetailsWidget.setImageNo(0);
+                propertyDetailsWidget.getImageLabel().setIcon(propertyDetailsWidget.getPropertyImageList().get(propertyDetailsWidget.getImageNo()));
 
             }
         }

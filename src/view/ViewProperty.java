@@ -2,7 +2,6 @@ package view;
 
 
 import control.actionListener.ManagePropertyActionListener;
-import control.actionListener.managePropertyActionListener.ImageSliderActionListener;
 import control.actionListener.managePropertyActionListener.ViewPropertyImageSliderActionListener;
 import modle.Property.Property;
 
@@ -86,19 +85,19 @@ public class ViewProperty extends javax.swing.JPanel {
         locationLabel.setBounds(22, 12, 61, 15);
 
         lCityLabel.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        lCityLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/locationIcon.png"))); // NOI18N
+        lCityLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icon/locationIcon.png"))); // NOI18N
         lCityLabel.setText(property.getPropertyLocation().getCity());
         locationPanel.add(lCityLabel);
         lCityLabel.setBounds(22, 45, 250, 18);
 
         addressLabel.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        addressLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/locationIcon.png"))); // NOI18N
+        addressLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icon/locationIcon.png"))); // NOI18N
         addressLabel.setText(property.getPropertyLocation().getStreet());
         locationPanel.add(addressLabel);
         addressLabel.setBounds(22, 81, 600, 18);
 
         postcodeLabel.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        postcodeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/postcodeIcon.png"))); // NOI18N
+        postcodeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icon/postcodeIcon.png"))); // NOI18N
         postcodeLabel.setText(String.valueOf(property.getPropertyLocation().getPostCode()));
         locationPanel.add(postcodeLabel);
         postcodeLabel.setBounds(22, 117, 100, 16);
@@ -123,22 +122,22 @@ public class ViewProperty extends javax.swing.JPanel {
         propertyInfoPanle.setName(""); // NOI18N
         propertyInfoPanle.setLayout(null);
 
-        typeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/propertyIcon.png"))); // NOI18N
+        typeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icon/propertyIcon.png"))); // NOI18N
         typeLabel.setText(property.getPropertyType());
         propertyInfoPanle.add(typeLabel);
         typeLabel.setBounds(62, 17, 164, 18);
 
-        roomNoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bedroomIcon.png"))); // NOI18N
+        roomNoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icon/bedroomIcon.png"))); // NOI18N
         roomNoLabel.setText(property.getNumberOfRoom()+" Bedrooms");
         propertyInfoPanle.add(roomNoLabel);
         roomNoLabel.setBounds(254, 17, 167, 18);
 
-        bathroomNoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bathroomIcon.png"))); // NOI18N
+        bathroomNoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icon/bathroomIcon.png"))); // NOI18N
         bathroomNoLabel.setText(property.getNumberOfBathroom()+" Bathrooms");
         propertyInfoPanle.add(bathroomNoLabel);
         bathroomNoLabel.setBounds(254, 68, 178, 18);
 
-        sizeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/propertySizeIcon.png"))); // NOI18N
+        sizeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icon/propertySizeIcon.png"))); // NOI18N
         sizeLabel.setText(property.getSize()+" sq.ft");
         propertyInfoPanle.add(sizeLabel);
         sizeLabel.setBounds(438, 68, 165, 18);
@@ -149,7 +148,7 @@ public class ViewProperty extends javax.swing.JPanel {
         propertyInfoPanle.add(priceLabel);
         priceLabel.setBounds(62, 70, 124, 15);
 
-        cityLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/locationIcon.png"))); // NOI18N
+        cityLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icon/locationIcon.png"))); // NOI18N
         cityLabel.setText(property.getPropertyLocation().getCity());
         propertyInfoPanle.add(cityLabel);
         cityLabel.setBounds(438, 17, 149, 18);

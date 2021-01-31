@@ -15,7 +15,7 @@ import java.util.ArrayList;
 /**
  * @author husam
  */
-public class PropertyAd extends javax.swing.JPanel {
+public class PropertyDetailsWidget extends javax.swing.JPanel {
 
     // Variables declaration - do not modify
     private ArrayList<ImageIcon> propertyImageList;
@@ -38,7 +38,7 @@ public class PropertyAd extends javax.swing.JPanel {
     /**
      * Creates new form Property
      */
-    public PropertyAd(Property property) {
+    public PropertyDetailsWidget(Property property) {
         this.property=property;
         initComponents();
         setData();
@@ -72,7 +72,7 @@ public class PropertyAd extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        imageLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/house.png"))); // NOI18N
+        imageLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icon/house.png"))); // NOI18N
         imageLabel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         leftImageButton.setBackground(new java.awt.Color(255, 255, 255));
@@ -97,23 +97,23 @@ public class PropertyAd extends javax.swing.JPanel {
         // priceLabel.setText("RM 1000");
 
         propertyTypeLabel.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        propertyTypeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/propertyIcon.png"))); // NOI18N
+        propertyTypeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icon/propertyIcon.png"))); // NOI18N
         //  propertyTypeLabel.setText("Apartment");
 
         bedroomNoLabel.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        bedroomNoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bedroomIcon.png"))); // NOI18N
+        bedroomNoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icon/bedroomIcon.png"))); // NOI18N
         // bedroomNoLabel.setText("2 Bedrooms");
 
         sizeLabel.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        sizeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/propertySizeIcon.png"))); // NOI18N
+        sizeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icon/propertySizeIcon.png"))); // NOI18N
         // sizeLabel.setText("1097 sq.ft.");
 
         bathroomNoLabel.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        bathroomNoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bathroomIcon.png"))); // NOI18N
+        bathroomNoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icon/bathroomIcon.png"))); // NOI18N
         //  bathroomNoLabel.setText("2 Bathrooms");
 
         locationLabel.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        locationLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/locationIcon.png"))); // NOI18N
+        locationLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/icon/locationIcon.png"))); // NOI18N
         // locationLabel.setText("Kuala Lumpur");
 
         viewButton.setBackground(new java.awt.Color(255, 204, 204));

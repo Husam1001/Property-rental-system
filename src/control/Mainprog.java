@@ -1,21 +1,22 @@
 package control;
 
 import view.LoginPage;
+import view.LookAndFeel;
 
 import javax.swing.*;
 
 public class Mainprog {
-    public static JFrame main;
+    public static JFrame mainFrame;
 
     public static void main(String[] args) {
-        main = new JFrame("Cyberjaya Online Rental Management System");
-        main.setSize(340, 340);
-        main.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        main.setLocationRelativeTo(null);
-        main.setResizable(false);
-        LoginPage obj = new LoginPage();
-        main.add(obj);
-        obj.setVisible(true);
-        main.setVisible(true);
+        mainFrame = new JFrame("Cyberjaya Online Rental Management System");
+        mainFrame.setSize(340, 340);
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mainFrame.setLocationRelativeTo(null);
+        mainFrame.setResizable(false);
+        LoginPage loginPage = new LoginPage();
+        mainFrame.add(loginPage);
+        loginPage.setVisible(true);
+        mainFrame.setVisible(true);
     }
 }

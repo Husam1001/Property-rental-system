@@ -10,11 +10,11 @@ public class AddNewPropertyActionListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
             AddProperty addproperty=new AddProperty();
-            Mainprog.main.setSize(540,710);
-            Mainprog.main.getContentPane().removeAll();
-            Mainprog.main.repaint();
-            Mainprog.main.setLocationRelativeTo(null);
-            Mainprog.main.add(addproperty);
+            Mainprog.mainFrame.setSize(540,710);
+            Mainprog.mainFrame.getContentPane().removeAll();
+            Mainprog.mainFrame.repaint();
+            Mainprog.mainFrame.setLocationRelativeTo(null);
+            Mainprog.mainFrame.add(addproperty);
             addproperty.setVisible(true);
     }
 }

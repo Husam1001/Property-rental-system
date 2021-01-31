@@ -3,7 +3,6 @@ package control.actionListener;
 import control.LoginController;
 import control.Mainprog;
 import control.Session;
-import view.AddProperty;
 import view.AgentHomePage;
 import view.LoginPage;
 
@@ -21,17 +20,17 @@ public class loginListener implements ActionListener {
         //set the session user if login our set user to null
         Session.setUser(LoginController.login(loginPageInstance));
         if (loginPageInstance.getUserNameTextField().getText().isEmpty()||loginPageInstance.getPasswordfild().getText().isEmpty()){
-            JOptionPane.showMessageDialog(Mainprog.main,"Warning, UserName / Password Cannot Be Empty.");
+            JOptionPane.showMessageDialog(Mainprog.mainFrame,"Warning, UserName / Password Cannot Be Empty.");
         }
         else if (!Session.isEmpty()) {
             loginPageInstance.getjPanel1().setVisible(false);
-            Mainprog.main.setSize(800,442);
+            Mainprog.mainFrame.setSize(800,442);
             AgentHomePage agentHomePage=new AgentHomePage();
-            Mainprog.main.add(agentHomePage);
-            Mainprog.main.setLocationRelativeTo(null);
+            Mainprog.mainFrame.add(agentHomePage);
+            Mainprog.mainFrame.setLocationRelativeTo(null);
             agentHomePage.setVisible(true);
     }else {
-            JOptionPane.showMessageDialog(Mainprog.main,"Error,Invalid UserName / Password .");
+            JOptionPane.showMessageDialog(Mainprog.mainFrame,"Error,Invalid UserName / Password .");
             // make the input fields empty
             loginPageInstance.getUserNameTextField().setText("");
             loginPageInstance.getPasswordfild().setText("");

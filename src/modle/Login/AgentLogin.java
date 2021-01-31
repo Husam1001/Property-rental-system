@@ -8,20 +8,9 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class AgentLogin implements LoggingOperation {
-
-    @Override
-    public User login(String userName,String password) {
-        try {
-            if (agentLogin(userName, password) != null){
-                return new Agent(100,"Husam","Admin@admin","+60111111111");
-            }else return null;
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-    public static String agentLogin(String userName, String password) throws FileNotFoundException {
-        File file = new File("src/file/AgentLogin.txt");
+   private Agent agent=null;
+    public  void agentLogin(String userName, String password) throws FileNotFoundException {
+        File file = new File("src/assets/files/AgentInfo.txt");
         String id;
         String tempUser;
         String tempPass;
@@ -34,15 +23,30 @@ public class AgentLogin implements LoggingOperation {
                     tempUser = read.next();
                     tempPass = read.next();
                     if (userName.equals(tempUser) && password.equals(tempPass)) {
-                        return id;
+                        //return id;
+                        agent=new Agent(Integer.parseInt(id),read.next(),read.next(),read.next());
                     }
+                    read.nextLine();
                 }
-                return null;
+                return ;
             } catch (Exception e) {
                 System.out.println(e);
             }
-        } else System.out.println("file not exist");
-        return null;
+        } else System.out.println("modle.file not exist");
+        return;
+    }
+
+    @Override
+    public User login(String userName, String password) {
+        try {
+            agentLogin(userName, password);
+            if (agent != null) {
+                return agent ;
+            } else return null;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 

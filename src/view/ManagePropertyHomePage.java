@@ -29,9 +29,9 @@ public class ManagePropertyHomePage extends JScrollPane {
      layout.setVgap(20);
      panel.setLayout(layout);
 
-     PropertyAd property=null;
+     PropertyDetailsWidget property=null;
      for (int i = 0; i <propertyList.size(); i++) {
-         property=new PropertyAd(propertyList.get(i));
+         property=new PropertyDetailsWidget(propertyList.get(i));
          panel.add(property);
      }
      panel.setPreferredSize(new Dimension(960,(280*15)/2));

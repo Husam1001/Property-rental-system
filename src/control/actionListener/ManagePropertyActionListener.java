@@ -2,7 +2,7 @@ package control.actionListener;
 
 import control.Mainprog;
 import control.mouseListener.HomeMouseListener;
-import file.PropertyOperation;
+import modle.fileOperation.PropertyOperation;
 import view.ManagePropertyHomePage;
 
 import javax.swing.*;
@@ -16,14 +16,13 @@ public class ManagePropertyActionListener implements ActionListener {
         ManagePropertyHomePage managePropertyHomePage=new ManagePropertyHomePage(PropertyOperation.getProperty());
         JButton homeBtn=new JButton("home");
         homeBtn.addActionListener( new HomeMouseListener());
-        Mainprog.main.setSize(990,600);
-        Mainprog.main.getContentPane().removeAll();
-        Mainprog.main.repaint();
-        Mainprog.main.setLocationRelativeTo(null);
-        Mainprog.main.add(homeBtn,BorderLayout.PAGE_START);
-        Mainprog.main.add(managePropertyHomePage);
+        Mainprog.mainFrame.setSize(990,600);
+        Mainprog.mainFrame.getContentPane().removeAll();
+        Mainprog.mainFrame.repaint();
+        Mainprog.mainFrame.setLocationRelativeTo(null);
+        Mainprog.mainFrame.add(homeBtn,BorderLayout.PAGE_START);
+        Mainprog.mainFrame.add(managePropertyHomePage);
         managePropertyHomePage.setVisible(true);
-        System.out.println("works");
 
     }
 }

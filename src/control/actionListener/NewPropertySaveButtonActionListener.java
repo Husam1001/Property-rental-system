@@ -2,7 +2,7 @@
 package control.actionListener;
 
 import control.Mainprog;
-import file.FileOperation;
+import modle.fileOperation.FileOperation;
 import view.AddProperty;
 import view.AgentHomePage;
 
@@ -20,10 +20,10 @@ public class NewPropertySaveButtonActionListener implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-       //extract the data and pass it to the method addNewProperty() ->write the data to a text file
+       //extract the data and pass it to the method addNewProperty() ->write the data to a text modle.file
 
         if (property.inputValidation()!=null){
-            JOptionPane.showMessageDialog(Mainprog.main,property.inputValidation());
+            JOptionPane.showMessageDialog(Mainprog.mainFrame,property.inputValidation());
         }else {
             String title=property.getTitleTextField().getText();
             String type=property.getPrpertyTypeComboBox().getSelectedItem().toString();
@@ -38,12 +38,12 @@ public class NewPropertySaveButtonActionListener implements ActionListener {
             ArrayList<File> image=property.getImages();
 
             if (FileOperation.addNewProperty(title, type, size, roomNo, bathRoomNo,price, description, address, city, postCode, image)) {
-                JOptionPane.showMessageDialog(Mainprog.main, "Property has been add successfully ");
-                Mainprog.main.setSize(800, 442);
+                JOptionPane.showMessageDialog(Mainprog.mainFrame, "Property has been add successfully ");
+                Mainprog.mainFrame.setSize(800, 442);
                 AgentHomePage agentHomePage = new AgentHomePage();
-                Mainprog.main.getContentPane().removeAll();
-                Mainprog.main.repaint();
-                Mainprog.main.add(agentHomePage);
+                Mainprog.mainFrame.getContentPane().removeAll();
+                Mainprog.mainFrame.repaint();
+                Mainprog.mainFrame.add(agentHomePage);
                 agentHomePage.setVisible(true);
             }
         }

@@ -2,16 +2,14 @@ package control.actionListener.managePropertyActionListener;
 
 import control.Mainprog;
 import control.actionListener.ManagePropertyActionListener;
-import file.PropertyOperation;
+import modle.fileOperation.PropertyOperation;
 import modle.Property.Address;
 import modle.Property.Property;
-import view.ManagePropertyHomePage;
 import view.UpdatePropertyView;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
 
 public class SaveUpdateButtonActionListener implements ActionListener {
     private UpdatePropertyView propertyView;
@@ -36,16 +34,16 @@ public class SaveUpdateButtonActionListener implements ActionListener {
 
         if (!property.compare(tempProperty)){
             PropertyOperation.updateProperty(tempProperty);
-            JOptionPane.showMessageDialog(Mainprog.main,"Property Updated successfully");
+            JOptionPane.showMessageDialog(Mainprog.mainFrame,"Property Updated successfully");
             new ManagePropertyActionListener().actionPerformed(null);
 
         }else {
-            JOptionPane.showMessageDialog(Mainprog.main,"No changes has been made!");
+            JOptionPane.showMessageDialog(Mainprog.mainFrame,"No changes has been made!");
             new ManagePropertyActionListener().actionPerformed(null);
         }
 
     }else {
-        JOptionPane.showMessageDialog(Mainprog.main,propertyView.inputValidation());
+        JOptionPane.showMessageDialog(Mainprog.mainFrame,propertyView.inputValidation());
     }
     }
 

@@ -11,11 +11,11 @@ import java.awt.event.MouseListener;
 public class HomeMouseListener implements MouseListener, ActionListener {
     @Override
     public void mouseClicked(MouseEvent e) {
-        Mainprog.main.setSize(800,442);
+        Mainprog.mainFrame.setSize(800,442);
         AgentHomePage agentHomePage=new AgentHomePage();
-        Mainprog.main.getContentPane().removeAll();
-        Mainprog.main.repaint();
-        Mainprog.main.add(agentHomePage);
+        Mainprog.mainFrame.getContentPane().removeAll();
+        Mainprog.mainFrame.repaint();
+        Mainprog.mainFrame.add(agentHomePage);
         agentHomePage.setVisible(true);
     }
 
@@ -41,11 +41,11 @@ public class HomeMouseListener implements MouseListener, ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Mainprog.main.setSize(800,442);
+        Mainprog.mainFrame.setSize(800,442);
         AgentHomePage agentHomePage=new AgentHomePage();
-        Mainprog.main.getContentPane().removeAll();
-        Mainprog.main.repaint();
-        Mainprog.main.add(agentHomePage);
+        Mainprog.mainFrame.getContentPane().removeAll();
+        Mainprog.mainFrame.repaint();
+        Mainprog.mainFrame.add(agentHomePage);
         agentHomePage.setVisible(true);
     }
 }

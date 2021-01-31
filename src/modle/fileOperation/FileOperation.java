@@ -1,7 +1,6 @@
-package file;
+package modle.fileOperation;
 
 import control.Session;
-import modle.Property.Property;
 import org.apache.commons.io.FileUtils;
 
 import java.io.*;
@@ -22,9 +21,9 @@ public class FileOperation {
 
     }
 
-    // addNewProperty() ->write the data Of the new property to a text file
+    // addNewProperty() ->write the data Of the new property to a text modle.file
     public static boolean addNewProperty(String title, String type, String size, int roomNo, int bathroomNo, double price, String description, String address, String city, int postCode, ArrayList<File> imageList) {
-        File propertyFile = new File("src/file/property.txt");
+        File propertyFile = new File("src/assets/files/property.txt");
         PrintWriter writer;
         int id = 0;
         try {
@@ -36,7 +35,7 @@ public class FileOperation {
         try {
             writer = new PrintWriter(new FileWriter(propertyFile, true));
             writer.println(Session.getUser().getId() + "<>" + id + "<>" + title + "<>" + type + "<>" + size + "<>" + roomNo + "<>" + bathroomNo + "<>" + price + "<>" + description + "<>" + address + "<>" + city + "<>" + postCode + "<>");
-            // copay the image to the source folder + print the file path to a text file
+            // copay the image to the source folder + print the modle.file path to a text modle.file
             saveImages(imageList, id);
         } catch (IOException e) {
             System.out.println(e);
@@ -50,7 +49,7 @@ public class FileOperation {
 //        //create a directory to store the images of each property
         try {
             Path path = Paths.get("src/assets/images/propertyImage/" + id + "/");
-            //java.nio.file.Files;
+            //java.nio.modle.file.Files;
             Files.createDirectories(path);
             System.out.println("Directory is created!");
         } catch (IOException e) {
@@ -58,17 +57,17 @@ public class FileOperation {
             System.err.println("Failed to create directory!" + e.getMessage());
         }
 
-        File imageListFile = new File("src/file/propertyImageList.txt");
+        File imageListFile = new File("src/assets/files/propertyImageList.txt");
         PrintWriter printWriter;
         File destination;
         printWriter = new PrintWriter(new FileWriter(imageListFile, true));
         printWriter.print(id + "<>");
         for (var image :
                 imageList) {
-            //copy image to the destination file
+            //copy image to the destination modle.file
             destination = new File("src/assets/images/propertyImage/" + id, image.getName());
             FileUtils.copyFile(image, destination);
-            //write the file bath to the text file
+            //write the modle.file bath to the text modle.file
             printWriter.print(destination + "<>");
         }
         printWriter.println();
@@ -77,8 +76,8 @@ public class FileOperation {
     }
 
     public static boolean removeProperty(int id) {
-        File property = new File("src/file/property.txt");
-        File tempFile = new File("src/file/tempFile.txt");
+        File property = new File("src/assets/files/property.txt");
+        File tempFile = new File("src/assets/files/tempFile.txt");
         PrintWriter writer = null;
         Scanner read = null;
         String temp1, temp2;
@@ -100,7 +99,7 @@ public class FileOperation {
             } else read.nextLine();
         }
         property.delete();
-        tempFile.renameTo(new File("src/file/property.txt"));
+        tempFile.renameTo(new File("src/assets/files/property.txt"));
         writer.close();
         read.close();
         removePropertyImage(id);
@@ -115,33 +114,6 @@ public class FileOperation {
             currentFile.delete();
         }
         imageDirectory.delete();
-    }
-
-
-    public static boolean agentLogin(String userName, String password) throws FileNotFoundException {
-        File file = new File("src/file/AgentLogin.txt");
-        String id;
-        String tempUser;
-        String tempPass;
-        if (file.exists()) {
-            Scanner read = new Scanner(file);
-            try {
-                read.useDelimiter("<>");
-                while (read.hasNext()) {
-                    id = read.next();
-                    tempUser = read.next();
-                    tempPass = read.next();
-                    System.out.println(id + "," + tempUser + "," + tempPass);
-                    if (userName.equals(tempUser) && password.equals(tempPass)) {
-                        return true;
-                    }
-                }
-                return false;
-            } catch (Exception e) {
-                System.out.println(e);
-            }
-        } else System.out.println("file not exist");
-        return false;
     }
 
 

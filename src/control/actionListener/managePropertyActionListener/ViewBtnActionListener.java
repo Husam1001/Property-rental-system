@@ -16,11 +16,11 @@ public class ViewBtnActionListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Mainprog.main.setSize(670, 960);
-        Mainprog.main.getContentPane().removeAll();
-        Mainprog.main.repaint();
-        Mainprog.main.setLocationRelativeTo(null);
-        Mainprog.main.add(new ViewProperty(property));
+        Mainprog.mainFrame.setSize(670, 960);
+        Mainprog.mainFrame.getContentPane().removeAll();
+        Mainprog.mainFrame.repaint();
+        Mainprog.mainFrame.setLocationRelativeTo(null);
+        Mainprog.mainFrame.add(new ViewProperty(property));
 
     }
 }
