@@ -1,6 +1,6 @@
 package control;
 
-import modle.User.User;
+import model.User.User;
 
 public class Session {
     public static User user;

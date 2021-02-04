@@ -2,9 +2,9 @@ package control.actionListener.managePropertyActionListener;
 
 import control.Mainprog;
 import control.actionListener.ManagePropertyActionListener;
-import modle.fileOperation.PropertyOperation;
-import modle.Property.Address;
-import modle.Property.Property;
+import model.fileOperation.PropertyOperation;
+import model.Property.Address;
+import model.Property.Property;
 import view.UpdatePropertyView;
 
 import javax.swing.*;
@@ -12,7 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class SaveUpdateButtonActionListener implements ActionListener {
-    private UpdatePropertyView propertyView;
+    private final UpdatePropertyView propertyView;
     public SaveUpdateButtonActionListener(UpdatePropertyView propertyView){
         this.propertyView=propertyView;
     }

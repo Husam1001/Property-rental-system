@@ -1,8 +1,8 @@
 package control.actionListener.managePropertyActionListener;
 
 import control.Mainprog;
-import modle.fileOperation.FileOperation;
-import modle.fileOperation.PropertyOperation;
+import model.fileOperation.FileOperation;
+import model.fileOperation.PropertyOperation;
 import view.ManagePropertyHomePage;
 
 import javax.swing.*;

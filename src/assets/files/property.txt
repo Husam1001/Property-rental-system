@@ -1,4 +1,5 @@
-100<>674634<>New Add<>Apartment/ Flat<>1454<>3<>1<>1500.0<>Best in town<>KlCC<>Kuala Lumpur<>453<>
-103<>662911<>jkldhf<>Bungalow<>564<>1<>1<>4565.0<>4654654<>45654<>Kuala Lumpur<>5656<>
-100<>704245<>11112<>Bungalow<>1111<>2<>1<>11.0<>1111111<>11111111<>Kuala Lumpur<>111111<>
-100<>908806<>2333<>Bungalow<>3454<>2<>2<>543453.0<>345345<>435345<>Kuala Lumpur<>453<>
+100<>582945<>BSP SkayPark<>Cottage<>1056<>3<>2<>1100.0<>Description  Description Description<>BSP<>Kuala Lumpur<>2621<>
+100<>979600<>BSP21<>Apartment/ Flat<>990<>2<>1<>999.0<>Description Description Description<>Bsp <>Kuala Lumpur<>2134<>
+100<>339771<>BS<>Bungalow<>343<>1<>1<>444.0<>Description Description<>SkayPark<>CyberJaya<>3436<>
+100<>1905<>111111<>Bungalow<>11<>1<>1<>1.0<>11111<>111<>Kuala Lumpur<>11<>
+100<>486822<>9999<>Bungalow<>8<>1<>1<>8.0<>8<>8<>Kuala Lumpur<>8<>

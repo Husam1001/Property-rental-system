@@ -3,6 +3,7 @@ package control.actionListener;
 import control.LoginController;
 import control.Mainprog;
 import control.Session;
+import model.User.Agent;
 import view.AgentHomePage;
 import view.LoginPage;
 
@@ -11,7 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class loginListener implements ActionListener {
-    private LoginPage loginPageInstance;
+    private final LoginPage loginPageInstance;
     public loginListener(LoginPage loginPageInstance){
         this.loginPageInstance =loginPageInstance;
     }
@@ -27,6 +28,7 @@ public class loginListener implements ActionListener {
             Mainprog.mainFrame.setSize(800,442);
             AgentHomePage agentHomePage=new AgentHomePage();
             Mainprog.mainFrame.add(agentHomePage);
+
             Mainprog.mainFrame.setLocationRelativeTo(null);
             agentHomePage.setVisible(true);
     }else {

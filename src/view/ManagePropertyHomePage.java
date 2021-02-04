@@ -1,6 +1,6 @@
 package view;
 
-import modle.Property.Property;
+import model.Property.Property;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class ManagePropertyHomePage extends JScrollPane {
   // private ArrayList<Property> propertyList;
-    JPanel panel;
+    private JPanel panel;
   public ManagePropertyHomePage(ArrayList <Property>propertyList){
      //this.propertyList=propertyList;
      showProperty(propertyList);
@@ -29,12 +29,12 @@ public class ManagePropertyHomePage extends JScrollPane {
      layout.setVgap(20);
      panel.setLayout(layout);
 
-     PropertyDetailsWidget property=null;
-     for (int i = 0; i <propertyList.size(); i++) {
-         property=new PropertyDetailsWidget(propertyList.get(i));
-         panel.add(property);
+
+     for (int i = propertyList.size()-1; i >=0; i--) {
+
+         panel.add(new PropertyDetailsWidget(propertyList.get(i)));
      }
-     panel.setPreferredSize(new Dimension(960,(280*15)/2));
+     panel.setPreferredSize(new Dimension(960,(330* propertyList.size())/2));
      setViewportView(panel);
  }
 

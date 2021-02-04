@@ -1,9 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Java template
-# Compiled class modle.fileOperation
+# Compiled class model.fileOperation
 *.class
 
-# Log modle.fileOperation
+# Log model.fileOperation
 *.log
 
 # BlueJ files

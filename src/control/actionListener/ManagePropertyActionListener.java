@@ -2,7 +2,7 @@ package control.actionListener;
 
 import control.Mainprog;
 import control.mouseListener.HomeMouseListener;
-import modle.fileOperation.PropertyOperation;
+import model.fileOperation.PropertyOperation;
 import view.ManagePropertyHomePage;
 
 import javax.swing.*;
@@ -22,7 +22,7 @@ public class ManagePropertyActionListener implements ActionListener {
         Mainprog.mainFrame.setLocationRelativeTo(null);
         Mainprog.mainFrame.add(homeBtn,BorderLayout.PAGE_START);
         Mainprog.mainFrame.add(managePropertyHomePage);
-        managePropertyHomePage.setVisible(true);
+        //managePropertyHomePage.setVisible(true);
 
     }
 }

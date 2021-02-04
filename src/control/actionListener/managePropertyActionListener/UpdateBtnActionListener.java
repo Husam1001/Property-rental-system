@@ -1,14 +1,14 @@
 package control.actionListener.managePropertyActionListener;
 
 import control.Mainprog;
-import modle.Property.Property;
+import model.Property.Property;
 import view.UpdatePropertyView;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class UpdateBtnActionListener implements ActionListener {
-    private Property property;
+    private final Property property;
     public UpdateBtnActionListener(Property property){
         this.property=property;
     }

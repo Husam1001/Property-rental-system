@@ -50,108 +50,11 @@ public class AddProperty extends JPanel {
     private JLabel selectImgLabel;
     private JLabel titleLabel;
     private JTextField titleTextField;
-    // End of variables declaration
-    /**
-     * Creates new form AddProperty
-     */
+
     public AddProperty() {
         initComponents();
     }
 
-
-
-    public ArrayList<File> getImages() {
-        return images;
-    }
-
-    public JSpinner getRoomNoSpinner() {
-        return RoomNoSpinner;
-    }
-
-    public JTextField getAddressTextField() {
-        return addressTextField;
-    }
-
-    public JSpinner getBathroomNoSpinner() {
-        return bathroomNoSpinner;
-    }
-
-    public JComboBox<String> getCityComboBox() {
-        return cityComboBox;
-    }
-
-    public JTextArea getDescriptionTextArea() {
-        return descriptionTextArea;
-    }
-
-
-    public JTextField getPostCodeTextField() {
-        return postCodeTextField;
-    }
-
-    public JTextField getPropertySizeTextField() {
-        return propertySizeTextField;
-    }
-
-    public JComboBox<String> getPrpertyTypeComboBox() {
-        return prpertyTypeComboBox;
-    }
-
-    public JTextField getTitleTextField() {
-        return titleTextField;
-    }
-
-    public JLabel getImageNoLabel() {
-        return imageNoLabel;
-    }
-
-    public JButton getRemoveImageButton() {
-        return removeImageButton;
-    }
-
-    public JTextField getPriceTextField() {
-        return priceTextField;
-    }
-
-    public String inputValidation(){
-        if(getTitleTextField().getText().isEmpty()){
-            return "Title Cannot be Empty";
-        }
-        if(getPrpertyTypeComboBox().getSelectedItem().toString().isEmpty()){
-            return "Property Type Cannot be Empty";
-        }
-        if(getPropertySizeTextField().getText().isEmpty()){
-            return "Property Size Cannot be Empty";
-        }
-        if(Integer.parseInt(getRoomNoSpinner().getValue().toString())<=0){
-            return "RoomNo Cannot be zero";
-        }
-        if(Integer.parseInt(getBathroomNoSpinner().getValue().toString())<=0){
-            return "BathroomNo Cannot be zero";
-        }
-        if(getDescriptionTextArea().getText().isEmpty()){
-            return "Description Cannot be Empty";
-        }
-        if(getAddressTextField().getText().isEmpty()){
-            return "Address Cannot be Empty";
-        }
-        if(getCityComboBox().getSelectedItem().toString().isEmpty()){
-            return "City Cannot be Empty";
-        }
-
-        if(getPostCodeTextField().getText().isEmpty()){
-            return "PostCode be Empty";
-        }
-        if (getImages().isEmpty()){
-            return "Image cannot be Empty at least 1 image ";
-        }
-        if (getPriceTextField().getText().isEmpty()){
-            return "Price cannot be Empty";
-        }
-        return null;
-    }
-
-    
     private void initComponents() {
         images = new ArrayList<>();
 
@@ -216,7 +119,7 @@ public class AddProperty extends JPanel {
 
         propertyTypeLabel.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         propertyTypeLabel.setForeground(new java.awt.Color(41, 57, 74));
-        propertyTypeLabel.setText("Prperty Type");
+        propertyTypeLabel.setText("Property Type");
         add(propertyTypeLabel);
         propertyTypeLabel.setBounds(54, 104, 104, 17);
         add(jSeparator1);
@@ -336,7 +239,7 @@ public class AddProperty extends JPanel {
         removeImageButton.setBackground(new java.awt.Color(250, 101, 133));
         removeImageButton.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         removeImageButton.setForeground(new java.awt.Color(255, 255, 255));
-        removeImageButton.setText("reomve");
+        removeImageButton.setText("remove");
         removeImageButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         removeImageButton.addActionListener(new RemoveImageButtonActionPerformed(this));
         removeImageButton.setVisible(false);
@@ -355,7 +258,104 @@ public class AddProperty extends JPanel {
 
         add(priceTextField);
         priceTextField.setBounds(354, 187, 86, 27);
-    }// </editor-fold>
-    
+    }
+
+
+
+
+
+    public ArrayList<File> getImages() {
+        return images;
+    }
+
+    public JSpinner getRoomNoSpinner() {
+        return RoomNoSpinner;
+    }
+
+    public JTextField getAddressTextField() {
+        return addressTextField;
+    }
+
+    public JSpinner getBathroomNoSpinner() {
+        return bathroomNoSpinner;
+    }
+
+    public JComboBox<String> getCityComboBox() {
+        return cityComboBox;
+    }
+
+    public JTextArea getDescriptionTextArea() {
+        return descriptionTextArea;
+    }
+
+
+    public JTextField getPostCodeTextField() {
+        return postCodeTextField;
+    }
+
+    public JTextField getPropertySizeTextField() {
+        return propertySizeTextField;
+    }
+
+    public JComboBox<String> getPrpertyTypeComboBox() {
+        return prpertyTypeComboBox;
+    }
+
+    public JTextField getTitleTextField() {
+        return titleTextField;
+    }
+
+    public JLabel getImageNoLabel() {
+        return imageNoLabel;
+    }
+
+    public JButton getRemoveImageButton() {
+        return removeImageButton;
+    }
+
+    public JTextField getPriceTextField() {
+        return priceTextField;
+    }
+
+    public String inputValidation(){
+        if(getTitleTextField().getText().isEmpty()){
+            return "Title Cannot be Empty";
+        }
+        if(getPrpertyTypeComboBox().getSelectedItem().toString().isEmpty()){
+            return "Property Type Cannot be Empty";
+        }
+        if(getPropertySizeTextField().getText().isEmpty()){
+            return "Property Size Cannot be Empty";
+        }
+        if(Integer.parseInt(getRoomNoSpinner().getValue().toString())<=0){
+            return "RoomNo Cannot be zero";
+        }
+        if(Integer.parseInt(getBathroomNoSpinner().getValue().toString())<=0){
+            return "BathroomNo Cannot be zero";
+        }
+        if(getDescriptionTextArea().getText().isEmpty()){
+            return "Description Cannot be Empty";
+        }
+        if(getAddressTextField().getText().isEmpty()){
+            return "Address Cannot be Empty";
+        }
+        if(getCityComboBox().getSelectedItem().toString().isEmpty()){
+            return "City Cannot be Empty";
+        }
+
+        if(getPostCodeTextField().getText().isEmpty()){
+            return "PostCode be Empty";
+        }
+        if (getImages().isEmpty()){
+            return "Image cannot be Empty at least 1 image ";
+        }
+        if (getPriceTextField().getText().isEmpty()){
+            return "Price cannot be Empty";
+        }
+        return null;
+    }
+
+
+
 }
 

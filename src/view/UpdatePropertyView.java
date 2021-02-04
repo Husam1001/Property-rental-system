@@ -1,9 +1,8 @@
 package view;
 
-import control.actionListener.NewPropertySaveButtonActionListener;
 import control.actionListener.managePropertyActionListener.SaveUpdateButtonActionListener;
 import control.mouseListener.HomeMouseListener;
-import modle.Property.Property;
+import model.Property.Property;
 
 import javax.swing.*;
 
@@ -43,7 +42,7 @@ public class UpdatePropertyView extends JPanel {
     private JComboBox<String> prpertyTypeComboBox;
     private JLabel titleLabel;
     private JTextField titleTextField;
-    private Property property;
+    private final Property property;
     // End of variables declaration
     /**
      * Creates new form AddProperty

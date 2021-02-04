@@ -1,7 +1,7 @@
 package control;
 
-import modle.Login.Login;
-import modle.User.User;
+import model.Login.Login;
+import model.User.User;
 import view.LoginPage;
 
 public class LoginController {

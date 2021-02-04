@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class RemoveImageButtonActionPerformed implements ActionListener {
-    private AddProperty property;
+    private final AddProperty property;
 
     public RemoveImageButtonActionPerformed(AddProperty property) {
         this.property = property;

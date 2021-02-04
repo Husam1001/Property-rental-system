@@ -15,10 +15,10 @@ public class LogoutActionListener implements ActionListener {
        if( Session.destroy()){
         JOptionPane.showMessageDialog(Mainprog.mainFrame,"Thank you , See YOU again.");
            Mainprog.mainFrame.getContentPane().removeAll();
+           Mainprog.mainFrame.repaint();
            Mainprog.mainFrame.setSize(340, 340);
            Mainprog.mainFrame.setLocationRelativeTo(null);
            Mainprog.mainFrame.setResizable(false);
-           Mainprog.mainFrame.repaint();
            Mainprog.mainFrame.add(new LoginPage());
            Mainprog.mainFrame.setVisible(true);
     }
