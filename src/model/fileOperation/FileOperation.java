@@ -25,7 +25,7 @@ public class FileOperation {
         }
         try {
             writer = new PrintWriter(new FileWriter(propertyFile, true));
-            writer.println(Session.getUser().getId() + "<>" + id + "<>" + title + "<>" + type + "<>" + size + "<>" + roomNo + "<>" + bathroomNo + "<>" + price + "<>" + description + "<>" + address + "<>" + city + "<>" + postCode + "<>");
+            writer.println(Session.getUser().getId() + "<>" + id + "<>" + title + "<>" + type + "<>" + size + "<>" + roomNo + "<>" + bathroomNo + "<>" + price + "<>" + description.replace(System.getProperty("line.separator"), "<endl>") + "<>" + address + "<>" + city + "<>" + postCode + "<>");
             // copay the image to the source folder + print the modle.file path to a text modle.file
             saveImages(imageList, id);
         } catch (IOException e) {

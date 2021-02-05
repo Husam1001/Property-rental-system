@@ -5,3 +5,5 @@
 992753<>src/assets/images/propertyImage/992753/pexels-expect-best-323705.jpg<>
 297248<>src/assets/images/propertyImage/297248/pexels-catherine-augustin-3049121.jpg<>
 486822<>src/assets/images/propertyImage/486822/pexels-john-tekeridis-1428348.jpg<>
+940780<>src/assets/images/propertyImage/940780/pexels-expect-best-323705.jpg<>
+492302<>src/assets/images/propertyImage/492302/pexels-ilya-shakir-2440471.jpg<>

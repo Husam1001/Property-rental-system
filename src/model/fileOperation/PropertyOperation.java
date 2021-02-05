@@ -47,7 +47,7 @@ public class PropertyOperation {
                     address = read.next();
                     city = read.next();
                     postCode = read.nextInt();
-                   propertyList.add(new Property(propertyId, title, type, price, roomNo, bathRoomNo, size, description, new Address(city, address, postCode), getImageList(propertyId)));
+                   propertyList.add(new Property(propertyId, title, type, price, roomNo, bathRoomNo, size, description.replace("<endl>",System.getProperty("line.separator")), new Address(city, address, postCode), getImageList(propertyId)));
                 }
                 read.nextLine();
             }
