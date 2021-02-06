@@ -1,6 +1,6 @@
 package control.actionListener;
 
-import view.AddProperty;
+import view.AddPropertyPanel;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -9,9 +9,9 @@ import java.awt.event.ActionListener;
 import java.io.File;
 
 public class UplodaPropertyImageActionListener  implements ActionListener {
-    AddProperty property;
+    AddPropertyPanel property;
 
-    public UplodaPropertyImageActionListener(AddProperty property) {
+    public UplodaPropertyImageActionListener(AddPropertyPanel property) {
         this.property = property;
     }
 

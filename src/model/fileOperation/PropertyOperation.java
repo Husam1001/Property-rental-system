@@ -112,9 +112,8 @@ public class PropertyOperation {
        while (read.hasNext()){
            temp1=read.next();
            temp2=read.next();
-           if (!temp2.equals(String.valueOf(property.getId()))){
-               writer.println(temp1+"<>"+temp2+read.nextLine());
-              // writer.println(Session.getUser().getId() + "<>" + id + "<>" + title + "<>" + type + "<>" + size + "<>" + roomNo + "<>" + bathroomNo + "<>" + price + "<>" + description + "<>" + address + "<>" + city + "<>" + postCode + "<>");
+           if (!temp2.equals(String.valueOf(property.getId()))) {
+               writer.println(temp1 + "<>" + temp2 + read.nextLine());
            }else {
                writer.println(temp1 + "<>" + property.getId() + "<>" +
                        property.getTitle() + "<>" +
@@ -123,7 +122,7 @@ public class PropertyOperation {
                        property.getNumberOfRoom() + "<>" +
                        property.getNumberOfBathroom() + "<>" +
                        property.getPrice() + "<>" +
-                       property.getDescription() + "<>" +
+                       property.getDescription().replace(System.getProperty("line.separator"),"<endl>")+ "<>" +
                        property.getPropertyLocation().getStreet() + "<>" +
                        property.getPropertyLocation().getCity() + "<>" +
                        property.getPropertyLocation().getPostCode() + "<>"

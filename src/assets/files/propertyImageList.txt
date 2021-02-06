@@ -1,9 +1,6 @@
-582945<>src/assets/images/propertyImage/582945/pexels-expect-best-323705.jpg<>src/assets/images/propertyImage/582945/pexels-jean-van-der-meulen-1457847.jpg<>src/assets/images/propertyImage/582945/pexels-monica-silvestre-1034584.jpg<>
-979600<>src/assets/images/propertyImage/979600/pexels-victoria-borodinova-1648771.jpg<>src/assets/images/propertyImage/979600/pexels-vecislavas-popa-813692.jpg<>src/assets/images/propertyImage/979600/pexels-sevenstorm-juhaszimrus-439391.jpg<>
-339771<>src/assets/images/propertyImage/339771/pexels-pixabay-272802.jpg<>
-1905<>src/assets/images/propertyImage/1905/pexels-ilya-shakir-2440471.jpg<>
-992753<>src/assets/images/propertyImage/992753/pexels-expect-best-323705.jpg<>
-297248<>src/assets/images/propertyImage/297248/pexels-catherine-augustin-3049121.jpg<>
-486822<>src/assets/images/propertyImage/486822/pexels-john-tekeridis-1428348.jpg<>
-940780<>src/assets/images/propertyImage/940780/pexels-expect-best-323705.jpg<>
-492302<>src/assets/images/propertyImage/492302/pexels-ilya-shakir-2440471.jpg<>
+984461<>src/assets/images/propertyImage/984461/pexels-ilya-shakir-2440471.jpg<>src/assets/images/propertyImage/984461/pexels-jean-van-der-meulen-1457847.jpg<>src/assets/images/propertyImage/984461/pexels-jean-van-der-meulen-1457847.jpg<>
+888073<>src/assets/images/propertyImage/888073/pexels-ilya-shakir-2440471.jpg<>
+447251<>src/assets/images/propertyImage/447251/pexels-mark-mccammon-2724749.jpg<>
+768644<>src/assets/images/propertyImage/768644/pexels-expect-best-323705.jpg<>src/assets/images/propertyImage/768644/pexels-john-tekeridis-1428348.jpg<>src/assets/images/propertyImage/768644/pexels-monica-silvestre-1034584.jpg<>
+47090<>src/assets/images/propertyImage/47090/pexels-catherine-augustin-3049121.jpg<>
+399596<>src/assets/images/propertyImage/399596/pexels-expect-best-323705.jpg<>

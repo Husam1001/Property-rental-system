@@ -4,6 +4,7 @@ package view;
 import control.actionListener.managePropertyActionListener.RegisterNewAgent;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class RegisterPanel extends JPanel {
     private JLabel emailLabel;
@@ -19,7 +20,6 @@ public class RegisterPanel extends JPanel {
     private JLabel registerLabel;
     private JLabel usernameLabel;
     private JTextField usernameTextField;
-    private JButton backButton;
     public RegisterPanel() {
         initComponents();
     }
@@ -40,8 +40,7 @@ public class RegisterPanel extends JPanel {
         phoneTextField = new JTextField();
         registerLabel = new JLabel();
         registerButton = new JButton();
-        backButton=new JButton();
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new Color(255, 255, 255));
         setLayout(null);
 
         mainLabel.setText("Cyberjaya Online Rental Management System");
@@ -50,27 +49,27 @@ public class RegisterPanel extends JPanel {
         add(nameTextField);
         nameTextField.setBounds(173, 85, 190, 25);
 
-        nameLabel.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        nameLabel.setFont(new Font("Dialog", 0, 12)); 
         nameLabel.setText("Name");
         add(nameLabel);
         nameLabel.setBounds(71, 87, 36, 15);
 
-        usernameLabel.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        usernameLabel.setFont(new Font("Dialog", 0, 12)); 
         usernameLabel.setText("UserName");
         add(usernameLabel);
         usernameLabel.setBounds(71, 124, 65, 15);
 
-        passwordLabel.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        passwordLabel.setFont(new Font("Dialog", 0, 12)); 
         passwordLabel.setText("Password");
         add(passwordLabel);
         passwordLabel.setBounds(71, 161, 60, 15);
 
-        emailLabel.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        emailLabel.setFont(new Font("Dialog", 0, 12)); 
         emailLabel.setText("Email");
         add(emailLabel);
         emailLabel.setBounds(71, 198, 33, 15);
 
-        phoneLabel.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        phoneLabel.setFont(new Font("Dialog", 0, 12)); 
         phoneLabel.setText("Phone");
         add(phoneLabel);
         phoneLabel.setBounds(71, 235, 40, 25);
@@ -83,22 +82,14 @@ public class RegisterPanel extends JPanel {
         add(phoneTextField);
         phoneTextField.setBounds(173, 233, 190, 25);
 
-        registerLabel.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        registerLabel.setForeground(new java.awt.Color(0, 102, 102));
+        registerLabel.setFont(new Font("Dialog", 0, 18)); 
+        registerLabel.setForeground(new Color(0, 102, 102));
         registerLabel.setHorizontalAlignment(SwingConstants.CENTER);
         registerLabel.setText("Register");
         registerLabel.setVerticalTextPosition(SwingConstants.BOTTOM);
         add(registerLabel);
         registerLabel.setBounds(12, 39, 403, 22);
-        backButton.setBackground(new java.awt.Color(204, 204, 204));
-        backButton.setFont(new java.awt.Font("Dialog", 2, 12)); // NOI18N
-        backButton.setText("Back");
-        backButton.setBorder(BorderFactory.createEtchedBorder());
-        backButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        add(backButton);
-        backButton.setBounds(350, 30, 52, 21);
-        backButton.addActionListener(null);
-        registerButton.setBackground(new java.awt.Color(0, 255, 204));
+        registerButton.setBackground(new Color(0, 255, 204));
         registerButton.setText("Register");
         registerButton.setBorder(BorderFactory.createEtchedBorder());
         registerButton.addActionListener(new RegisterNewAgent(this));

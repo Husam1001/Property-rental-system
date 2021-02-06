@@ -3,7 +3,7 @@ package control.actionListener;
 
 import control.Mainprog;
 import model.fileOperation.FileOperation;
-import view.AddProperty;
+import view.AddPropertyPanel;
 import view.AgentHomePage;
 
 import javax.swing.*;
@@ -13,9 +13,9 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class NewPropertySaveButtonActionListener implements ActionListener {
-    AddProperty property;
+    AddPropertyPanel property;
 
-    public NewPropertySaveButtonActionListener(AddProperty property) {
+    public NewPropertySaveButtonActionListener(AddPropertyPanel property) {
         this.property = property;
     }
     @Override

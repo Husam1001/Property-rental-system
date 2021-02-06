@@ -14,6 +14,7 @@ public class Mainprog {
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainFrame.setLocationRelativeTo(null);
         mainFrame.setResizable(false);
+        mainFrame.setIconImage(new ImageIcon("src/assets/icon/house.png").getImage());
         LoginPage loginPage = new LoginPage();
         mainFrame.add(loginPage);
         loginPage.setVisible(true);

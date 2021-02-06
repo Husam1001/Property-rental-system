@@ -7,9 +7,8 @@ import view.LoginPage;
 public class LoginController {
     public static User login(LoginPage loginPage){
         String username= loginPage.getUserNameTextField().getText();
-        String password= loginPage.getPasswordfild().getText();
+        String password= String.valueOf(loginPage.getPasswordField().getPassword());
         User user= Login.login("Agent",username,password);
-        //Session.setUser();
         return user;
     }
 }

@@ -7,16 +7,12 @@ import control.actionListener.UplodaPropertyImageActionListener;
 import control.mouseListener.HomeMouseListener;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.File;
 import java.util.ArrayList;
 
-/**
- *
- * @author husam
- */
-public class AddProperty extends JPanel {
+public class AddPropertyPanel extends JPanel {
     
-    // Variables declaration -
     private ArrayList<File> images;
     private JLabel imageNoLabel;
     private JSpinner RoomNoSpinner;
@@ -51,7 +47,7 @@ public class AddProperty extends JPanel {
     private JLabel titleLabel;
     private JTextField titleTextField;
 
-    public AddProperty() {
+    public AddPropertyPanel() {
         initComponents();
     }
 
@@ -93,45 +89,45 @@ public class AddProperty extends JPanel {
 
 
 
-        setBackground(new java.awt.Color(255, 255, 255));
-        setName(""); // NOI18N
+        setBackground(new Color(255, 255, 255));
+        setName("");
         setLayout(null);
 
-        mainLabel.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        mainLabel.setForeground(new java.awt.Color(172, 198, 94));
+        mainLabel.setFont(new Font("Dialog", 3, 18));
+        mainLabel.setForeground(new Color(172, 198, 94));
         mainLabel.setHorizontalAlignment(SwingConstants.CENTER);
         mainLabel.setText("Add Property");
         mainLabel.setHorizontalTextPosition(SwingConstants.CENTER);
         add(mainLabel);
         mainLabel.setBounds(184, 12, 179, 25);
 
-        titleLabel.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
-        titleLabel.setForeground(new java.awt.Color(41, 57, 74));
+        titleLabel.setFont(new Font("Dialog", 3, 14));
+        titleLabel.setForeground(new Color(41, 57, 74));
         titleLabel.setLabelFor(titleTextField);
         titleLabel.setText("Title");
         add(titleLabel);
         titleLabel.setBounds(62, 55, 40, 26);
 
         titleTextField.setToolTipText("");
-        titleTextField.setName(""); // NOI18N
+        titleTextField.setName("");
         add(titleTextField);
         titleTextField.setBounds(184, 56, 250, 26);
 
-        propertyTypeLabel.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
-        propertyTypeLabel.setForeground(new java.awt.Color(41, 57, 74));
+        propertyTypeLabel.setFont(new Font("Dialog", 3, 14));
+        propertyTypeLabel.setForeground(new Color(41, 57, 74));
         propertyTypeLabel.setText("Property Type");
         add(propertyTypeLabel);
         propertyTypeLabel.setBounds(54, 104, 104, 17);
         add(jSeparator1);
         jSeparator1.setBounds(0, 167, 542, 2);
 
-        prpertyTypeComboBox.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        prpertyTypeComboBox.setFont(new Font("Dialog", 0, 12));
         prpertyTypeComboBox.setModel(new DefaultComboBoxModel<>(new String[] { "Bungalow", "Cottage", "Chattel house", "Townhouse","Apartment/ Flat","Duplex/ Studio" }));
         add(prpertyTypeComboBox);
         prpertyTypeComboBox.setBounds(184, 100, 250, 24);
 
-        RooomNoLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        RooomNoLabel.setForeground(new java.awt.Color(41, 57, 74));
+        RooomNoLabel.setFont(new Font("Dialog", 1, 14));
+        RooomNoLabel.setForeground(new Color(41, 57, 74));
         RooomNoLabel.setLabelFor(RoomNoSpinner);
         RooomNoLabel.setText("Room no");
         add(RooomNoLabel);
@@ -141,8 +137,8 @@ public class AddProperty extends JPanel {
         add(bathroomNoSpinner);
         bathroomNoSpinner.setBounds(190, 233, 60, 28);
 
-        bathroomNoLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        bathroomNoLabel.setForeground(new java.awt.Color(41, 57, 74));
+        bathroomNoLabel.setFont(new Font("Dialog", 1, 14));
+        bathroomNoLabel.setForeground(new Color(41, 57, 74));
         bathroomNoLabel.setLabelFor(bathroomNoSpinner);
         bathroomNoLabel.setText("Bathroom no");
         add(bathroomNoLabel);
@@ -150,16 +146,16 @@ public class AddProperty extends JPanel {
         add(jSeparator2);
         jSeparator2.setBounds(0, 290, 542, 2);
 
-        selectImgLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        selectImgLabel.setForeground(new java.awt.Color(41, 57, 74));
+        selectImgLabel.setFont(new Font("Dialog", 1, 14));
+        selectImgLabel.setForeground(new Color(41, 57, 74));
         selectImgLabel.setLabelFor(selectImgButton);
         selectImgLabel.setText("Upload Picture..");
         add(selectImgLabel);
         selectImgLabel.setBounds(51, 562, 125, 25);
 
-        selectImgButton.setBackground(new java.awt.Color(200, 223, 250));
-        selectImgButton.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        selectImgButton.setForeground(new java.awt.Color(41, 57, 74));
+        selectImgButton.setBackground(new Color(200, 223, 250));
+        selectImgButton.setFont(new Font("Dialog", 1, 14));
+        selectImgButton.setForeground(new Color(41, 57, 74));
         selectImgButton.setText("Upload");
         selectImgButton.setBorder(new  javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         selectImgButton.addActionListener(new UplodaPropertyImageActionListener(this));
@@ -173,23 +169,23 @@ public class AddProperty extends JPanel {
         add(jScrollPane1);
         jScrollPane1.setBounds(176, 304, 316, 78);
 
-        descriptionLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        descriptionLabel.setForeground(new java.awt.Color(41, 57, 74));
+        descriptionLabel.setFont(new Font("Dialog", 1, 14));
+        descriptionLabel.setForeground(new Color(41, 57, 74));
         descriptionLabel.setLabelFor(descriptionTextArea);
         descriptionLabel.setText("Description");
         add(descriptionLabel);
         descriptionLabel.setBounds(35, 339, 90, 17);
 
-        SaveButton.setBackground(new java.awt.Color(172, 198, 94));
-        SaveButton.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
-        SaveButton.setForeground(new java.awt.Color(41, 57, 74));
+        SaveButton.setBackground(new Color(172, 198, 94));
+        SaveButton.setFont(new Font("Dialog", 3, 14));
+        SaveButton.setForeground(new Color(41, 57, 74));
         SaveButton.setText("Save");
         SaveButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         SaveButton.addActionListener(new NewPropertySaveButtonActionListener(this));
         add(SaveButton);
         SaveButton.setBounds(209, 620, 107, 37);
 
-        addressLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        addressLabel.setFont(new Font("Dialog", 1, 14));
         addressLabel.setLabelFor(addressTextField);
         addressLabel.setText("Address");
         add(addressLabel);
@@ -197,8 +193,8 @@ public class AddProperty extends JPanel {
         add(addressTextField);
         addressTextField.setBounds(176, 414, 316, 33);
 
-        propertySizeLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        propertySizeLabel.setForeground(new java.awt.Color(41, 57, 74));
+        propertySizeLabel.setFont(new Font("Dialog", 1, 14));
+        propertySizeLabel.setForeground(new Color(41, 57, 74));
         propertySizeLabel.setLabelFor(propertySizeTextField);
         propertySizeLabel.setText("Size");
         add(propertySizeLabel);
@@ -207,7 +203,7 @@ public class AddProperty extends JPanel {
         add(propertySizeTextField);
         propertySizeTextField.setBounds(184, 136, 250, 25);
 
-        homeLabel.setForeground(new java.awt.Color(51, 0, 51));
+        homeLabel.setForeground(new Color(51, 0, 51));
         homeLabel.setText("Home");
         add(homeLabel);
         homeLabel.setBounds(478, 12, 52, 25);
@@ -222,7 +218,7 @@ public class AddProperty extends JPanel {
         add(postCodeLabel);
         postCodeLabel.setBounds(332, 474, 76, 19);
 
-        postCodeTextField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        postCodeTextField.setCursor(new Cursor(Cursor.TEXT_CURSOR));
 
         add(postCodeTextField);
         postCodeTextField.setBounds(420, 472, 72, 24);
@@ -231,14 +227,14 @@ public class AddProperty extends JPanel {
         add(jSeparator4);
         jSeparator4.setBounds(0, 525, 542, 2);
 
-        cityComboBox.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        cityComboBox.setFont(new Font("Dialog", 0, 12));
         cityComboBox.setModel(new DefaultComboBoxModel<>(new String[] { "Kuala Lumpur","Subang Jaya","CyberJaya","Ipoh", "Kuching", "Johor Bahru","Shah Alam","Petaling Jaya" }));
         add(cityComboBox);
         cityComboBox.setBounds(176, 471, 144, 24);
 
-        removeImageButton.setBackground(new java.awt.Color(250, 101, 133));
-        removeImageButton.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        removeImageButton.setForeground(new java.awt.Color(255, 255, 255));
+        removeImageButton.setBackground(new Color(250, 101, 133));
+        removeImageButton.setFont(new Font("Dialog", 0, 14));
+        removeImageButton.setForeground(new Color(255, 255, 255));
         removeImageButton.setText("remove");
         removeImageButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         removeImageButton.addActionListener(new RemoveImageButtonActionPerformed(this));
@@ -250,7 +246,7 @@ public class AddProperty extends JPanel {
         add(imageNoLabel);
         imageNoLabel.setBounds(401, 561, 8, 27);
         imageNoLabel.setVisible(false);
-        priceLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        priceLabel.setFont(new Font("Dialog", 1, 14));
         priceLabel.setLabelFor(priceTextField);
         priceLabel.setText("Price");
         add(priceLabel);

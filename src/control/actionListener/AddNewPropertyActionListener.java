@@ -1,7 +1,7 @@
 package control.actionListener;
 
 import control.Mainprog;
-import view.AddProperty;
+import view.AddPropertyPanel;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 public class AddNewPropertyActionListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
-            AddProperty addproperty=new AddProperty();
+            AddPropertyPanel addproperty=new AddPropertyPanel();
             Mainprog.mainFrame.setSize(540,710);
             Mainprog.mainFrame.getContentPane().removeAll();
             Mainprog.mainFrame.repaint();

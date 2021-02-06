@@ -1,15 +1,14 @@
 package control.actionListener;
 
-import view.AddProperty;
+import view.AddPropertyPanel;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 public class RemoveImageButtonActionPerformed implements ActionListener {
-    private final AddProperty property;
+    private final AddPropertyPanel property;
 
-    public RemoveImageButtonActionPerformed(AddProperty property) {
+    public RemoveImageButtonActionPerformed(AddPropertyPanel property) {
         this.property = property;
     }
 

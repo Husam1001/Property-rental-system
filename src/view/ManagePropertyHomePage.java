@@ -7,10 +7,8 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class ManagePropertyHomePage extends JScrollPane {
-  // private ArrayList<Property> propertyList;
     private JPanel panel;
   public ManagePropertyHomePage(ArrayList <Property>propertyList){
-     //this.propertyList=propertyList;
      showProperty(propertyList);
   }
 

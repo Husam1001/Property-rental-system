@@ -16,7 +16,7 @@ public class DeletePropertyBtnActionListener implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (JOptionPane.showConfirmDialog(Mainprog.mainFrame,"Yes/No")==0){
+        if (JOptionPane.showConfirmDialog(Mainprog.mainFrame,"Are you sure you want to delete the property ?")==0){
             FileOperation.removeProperty(id);
             Mainprog.mainFrame.setSize(990,600);
             ManagePropertyHomePage scrollPane=(ManagePropertyHomePage) Mainprog.mainFrame.getContentPane().getComponent(1);

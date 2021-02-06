@@ -1,9 +1,9 @@
 package model.Property;
 
 public class Address {
-    String fullAddress;
-    String city;
-    int postCode;
+   private String fullAddress;
+   private String city;
+   private int postCode;
 
     public Address(String city, String fullAddress, int postCode) {
 

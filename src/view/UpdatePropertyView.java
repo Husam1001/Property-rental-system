@@ -5,6 +5,7 @@ import control.mouseListener.HomeMouseListener;
 import model.Property.Property;
 
 import javax.swing.*;
+import java.awt.*;
 
 
 /**
@@ -180,45 +181,44 @@ public class UpdatePropertyView extends JPanel {
 
 
 
-        setBackground(new java.awt.Color(255, 255, 255));
-        setName(""); // NOI18N
+        setBackground(new Color(255, 255, 255));
         setLayout(null);
 
-        mainLabel.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        mainLabel.setForeground(new java.awt.Color(172, 198, 94));
+        mainLabel.setFont(new Font("Dialog", 3, 18)); 
+        mainLabel.setForeground(new Color(172, 198, 94));
         mainLabel.setHorizontalAlignment(SwingConstants.CENTER);
         mainLabel.setText("Update Property");
         mainLabel.setHorizontalTextPosition(SwingConstants.CENTER);
         add(mainLabel);
         mainLabel.setBounds(184, 12, 179, 25);
 
-        titleLabel.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
-        titleLabel.setForeground(new java.awt.Color(41, 57, 74));
+        titleLabel.setFont(new Font("Dialog", 3, 14)); 
+        titleLabel.setForeground(new Color(41, 57, 74));
         titleLabel.setLabelFor(titleTextField);
         titleLabel.setText("Title");
         add(titleLabel);
         titleLabel.setBounds(62, 55, 40, 26);
 
         titleTextField.setToolTipText("");
-        titleTextField.setName(""); // NOI18N
+        titleTextField.setName(""); 
         add(titleTextField);
         titleTextField.setBounds(184, 56, 250, 26);
 
-        propertyTypeLabel.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
-        propertyTypeLabel.setForeground(new java.awt.Color(41, 57, 74));
-        propertyTypeLabel.setText("Prperty Type");
+        propertyTypeLabel.setFont(new Font("Dialog", 3, 14)); 
+        propertyTypeLabel.setForeground(new Color(41, 57, 74));
+        propertyTypeLabel.setText("Property Type");
         add(propertyTypeLabel);
         propertyTypeLabel.setBounds(54, 104, 104, 17);
         add(jSeparator1);
         jSeparator1.setBounds(0, 167, 542, 2);
 
-        prpertyTypeComboBox.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        prpertyTypeComboBox.setFont(new Font("Dialog", 0, 12)); 
         prpertyTypeComboBox.setModel(new DefaultComboBoxModel<>(new String[] { "Bungalow", "Cottage", "Chattel house", "Townhouse","Apartment/ Flat","Duplex/ Studio" }));
         add(prpertyTypeComboBox);
         prpertyTypeComboBox.setBounds(184, 100, 250, 24);
 
-        roomNoLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        roomNoLabel.setForeground(new java.awt.Color(41, 57, 74));
+        roomNoLabel.setFont(new Font("Dialog", 1, 14)); 
+        roomNoLabel.setForeground(new Color(41, 57, 74));
         roomNoLabel.setLabelFor(roomNoSpinner);
         roomNoLabel.setText("Room no");
         add(roomNoLabel);
@@ -228,8 +228,8 @@ public class UpdatePropertyView extends JPanel {
         add(bathroomNoSpinner);
         bathroomNoSpinner.setBounds(190, 233, 60, 28);
 
-        bathroomNoLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        bathroomNoLabel.setForeground(new java.awt.Color(41, 57, 74));
+        bathroomNoLabel.setFont(new Font("Dialog", 1, 14)); 
+        bathroomNoLabel.setForeground(new Color(41, 57, 74));
         bathroomNoLabel.setLabelFor(bathroomNoSpinner);
         bathroomNoLabel.setText("Bathroom no");
         add(bathroomNoLabel);
@@ -245,23 +245,23 @@ public class UpdatePropertyView extends JPanel {
         add(jScrollPane1);
         jScrollPane1.setBounds(176, 304, 316, 78);
 
-        descriptionLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        descriptionLabel.setForeground(new java.awt.Color(41, 57, 74));
+        descriptionLabel.setFont(new Font("Dialog", 1, 14)); 
+        descriptionLabel.setForeground(new Color(41, 57, 74));
         descriptionLabel.setLabelFor(descriptionTextArea);
         descriptionLabel.setText("Description");
         add(descriptionLabel);
         descriptionLabel.setBounds(35, 339, 90, 17);
 
-        updateButton.setBackground(new java.awt.Color(172, 198, 94));
-        updateButton.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
-        updateButton.setForeground(new java.awt.Color(41, 57, 74));
+        updateButton.setBackground(new Color(172, 198, 94));
+        updateButton.setFont(new Font("Dialog", 3, 14)); 
+        updateButton.setForeground(new Color(41, 57, 74));
         updateButton.setText("Update");
         updateButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         updateButton.addActionListener(new SaveUpdateButtonActionListener(this));
         add(updateButton);
         updateButton.setBounds(209, 560, 107, 37);
 
-        addressLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        addressLabel.setFont(new Font("Dialog", 1, 14)); 
         addressLabel.setLabelFor(addressTextField);
         addressLabel.setText("Address");
         add(addressLabel);
@@ -269,8 +269,8 @@ public class UpdatePropertyView extends JPanel {
         add(addressTextField);
         addressTextField.setBounds(176, 414, 316, 33);
 
-        propertySizeLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        propertySizeLabel.setForeground(new java.awt.Color(41, 57, 74));
+        propertySizeLabel.setFont(new Font("Dialog", 1, 14)); 
+        propertySizeLabel.setForeground(new Color(41, 57, 74));
         propertySizeLabel.setLabelFor(propertySizeTextField);
         propertySizeLabel.setText("Size");
         add(propertySizeLabel);
@@ -279,7 +279,7 @@ public class UpdatePropertyView extends JPanel {
         add(propertySizeTextField);
         propertySizeTextField.setBounds(184, 136, 250, 25);
 
-        backButton.setForeground(new java.awt.Color(51, 0, 51));
+        backButton.setForeground(new Color(51, 0, 51));
         backButton.setText("Home");
         add(backButton);
         backButton.setBounds(460, 12, 80, 25);
@@ -294,7 +294,7 @@ public class UpdatePropertyView extends JPanel {
         add(postCodeLabel);
         postCodeLabel.setBounds(332, 474, 76, 19);
 
-        postCodeTextField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        postCodeTextField.setCursor(new Cursor(Cursor.TEXT_CURSOR));
 
         add(postCodeTextField);
         postCodeTextField.setBounds(420, 472, 72, 24);
@@ -303,12 +303,12 @@ public class UpdatePropertyView extends JPanel {
         add(jSeparator4);
         jSeparator4.setBounds(0, 525, 542, 2);
 
-        cityComboBox.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        cityComboBox.setFont(new Font("Dialog", 0, 12)); 
         cityComboBox.setModel(new DefaultComboBoxModel<>(new String[] { "Kuala Lumpur","Subang Jaya","CyberJaya","Ipoh", "Kuching", "Johor Bahru","Shah Alam","Petaling Jaya" }));
         add(cityComboBox);
         cityComboBox.setBounds(176, 471, 144, 24);
 
-        priceLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        priceLabel.setFont(new Font("Dialog", 1, 14));
         priceLabel.setLabelFor(priceTextField);
         priceLabel.setText("Price");
         add(priceLabel);
@@ -316,7 +316,7 @@ public class UpdatePropertyView extends JPanel {
 
         add(priceTextField);
         priceTextField.setBounds(354, 187, 86, 27);
-    }// </editor-fold>
+    }
 
 }
 

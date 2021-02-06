@@ -107,9 +107,9 @@ public class Property {
         else if (!(this.numberOfBathroom==comparableProperty.numberOfBathroom))return false;
         else if (!(this.price==comparableProperty.price))return false;
         else if(!this.description.equals(comparableProperty.description))return false;
-        else if (!this.getPropertyLocation().fullAddress.equals(comparableProperty.getPropertyLocation().fullAddress))return false;
-        else if (!this.getPropertyLocation().city.equals(comparableProperty.getPropertyLocation().city))return false;
-        else return this.getPropertyLocation().postCode == comparableProperty.getPropertyLocation().postCode;
+        else if (!this.getPropertyLocation().getStreet().equals(comparableProperty.getPropertyLocation().getStreet()))return false;
+        else if (!this.getPropertyLocation().getCity().equals(comparableProperty.getPropertyLocation().getCity()))return false;
+        else return this.getPropertyLocation().getPostCode() == comparableProperty.getPropertyLocation().getPostCode();
     }
 
     public void setPropertyImages(ArrayList<String> propertyImages) {

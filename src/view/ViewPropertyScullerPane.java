@@ -1,10 +1,8 @@
 package view;
 
-import model.Property.Property;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 
 public class ViewPropertyScullerPane extends JScrollPane {
     private ViewProperty propertyView;

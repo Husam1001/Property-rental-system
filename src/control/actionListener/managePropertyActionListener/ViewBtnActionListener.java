@@ -17,7 +17,7 @@ public class ViewBtnActionListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Mainprog.mainFrame.setSize(670, 600);
+        Mainprog.mainFrame.setSize(675, 670);
         Mainprog.mainFrame.getContentPane().removeAll();
         Mainprog.mainFrame.repaint();
         Mainprog.mainFrame.setLocationRelativeTo(null);

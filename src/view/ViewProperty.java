@@ -7,6 +7,7 @@ import model.Property.Property;
 
 
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -68,7 +69,7 @@ public class ViewProperty extends JPanel {
         titleLabel = new JLabel();
         descriptionLabel = new JLabel();
         propertyImage=new ArrayList<>();
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new Color(255, 255, 255));
         setLayout(null);
 
 
@@ -76,11 +77,11 @@ public class ViewProperty extends JPanel {
         ImageIcon tempImage=new ImageIcon(property.getPropertyImages().get(0));
         ImageIcon tempImage2=new ImageIcon(getScaledImage(tempImage.getImage(),472,303 ));
         imageLabel.setIcon(tempImage2);
-        imageLabel.setBorder(BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        imageLabel.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
         add(imageLabel);
         imageLabel.setBounds(68, 41, 472, 224);
 
-        backButton.setBackground(new java.awt.Color(204, 255, 204));
+        backButton.setBackground(new Color(204, 255, 204));
         backButton.setText("Back");
         backButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         backButton.addActionListener(new ManagePropertyActionListener());
@@ -105,20 +106,20 @@ public class ViewProperty extends JPanel {
         locationPanel.add(locationLabel);
         locationLabel.setBounds(22, 12, 61, 15);
 
-        lCityLabel.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        lCityLabel.setIcon(new ImageIcon(getClass().getResource("/assets/icon/locationIcon.png"))); // NOI18N
+        lCityLabel.setFont(new Font("Dialog", 0, 12));
+        lCityLabel.setIcon(new ImageIcon(getClass().getResource("/assets/icon/locationIcon.png"))); 
         lCityLabel.setText(property.getPropertyLocation().getCity());
         locationPanel.add(lCityLabel);
         lCityLabel.setBounds(22, 45, 250, 18);
 
-        addressLabel.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        addressLabel.setIcon(new ImageIcon(getClass().getResource("/assets/icon/locationIcon.png"))); // NOI18N
+        addressLabel.setFont(new Font("Dialog", 0, 12)); 
+        addressLabel.setIcon(new ImageIcon(getClass().getResource("/assets/icon/locationIcon.png"))); 
         addressLabel.setText(property.getPropertyLocation().getStreet());
         locationPanel.add(addressLabel);
         addressLabel.setBounds(22, 81, 600, 18);
 
-        postcodeLabel.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        postcodeLabel.setIcon(new ImageIcon(getClass().getResource("/assets/icon/postcodeIcon.png"))); // NOI18N
+        postcodeLabel.setFont(new Font("Dialog", 0, 12)); 
+        postcodeLabel.setIcon(new ImageIcon(getClass().getResource("/assets/icon/postcodeIcon.png"))); 
         postcodeLabel.setText(String.valueOf(property.getPropertyLocation().getPostCode()));
         locationPanel.add(postcodeLabel);
         postcodeLabel.setBounds(22, 117, 100, 16);
@@ -126,7 +127,7 @@ public class ViewProperty extends JPanel {
         add(locationPanel);
         locationPanel.setBounds(4, 464, 634, 145);
 
-        descriptionPanel.setBackground(new java.awt.Color(255, 255, 255));
+        descriptionPanel.setBackground(new Color(255, 255, 255));
         descriptionPanel.setLayout(null);
         descriptionTextPane.setText(property.getDescription());
         descriptionTextPane.setEditable(false);
@@ -138,38 +139,38 @@ public class ViewProperty extends JPanel {
         add(descriptionPanel);
         descriptionPanel.setBounds(4, 647, 640, 272);
 
-        propertyInfoPanle.setBackground(new java.awt.Color(255, 255, 255));
-        propertyInfoPanle.setBorder(BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        propertyInfoPanle.setName(""); // NOI18N
+        propertyInfoPanle.setBackground(new Color(255, 255, 255));
+        propertyInfoPanle.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
+        propertyInfoPanle.setName(""); 
         propertyInfoPanle.setLayout(null);
 
-        typeLabel.setIcon(new ImageIcon(getClass().getResource("/assets/icon/propertyIcon.png"))); // NOI18N
+        typeLabel.setIcon(new ImageIcon(getClass().getResource("/assets/icon/propertyIcon.png"))); 
         typeLabel.setText(property.getPropertyType());
         propertyInfoPanle.add(typeLabel);
         typeLabel.setBounds(62, 17, 164, 18);
 
-        roomNoLabel.setIcon(new ImageIcon(getClass().getResource("/assets/icon/bedroomIcon.png"))); // NOI18N
+        roomNoLabel.setIcon(new ImageIcon(getClass().getResource("/assets/icon/bedroomIcon.png"))); 
         roomNoLabel.setText(property.getNumberOfRoom()+" Bedrooms");
         propertyInfoPanle.add(roomNoLabel);
         roomNoLabel.setBounds(254, 17, 167, 18);
 
-        bathroomNoLabel.setIcon(new ImageIcon(getClass().getResource("/assets/icon/bathroomIcon.png"))); // NOI18N
+        bathroomNoLabel.setIcon(new ImageIcon(getClass().getResource("/assets/icon/bathroomIcon.png"))); 
         bathroomNoLabel.setText(property.getNumberOfBathroom()+" Bathrooms");
         propertyInfoPanle.add(bathroomNoLabel);
         bathroomNoLabel.setBounds(254, 68, 178, 18);
 
-        sizeLabel.setIcon(new ImageIcon(getClass().getResource("/assets/icon/propertySizeIcon.png"))); // NOI18N
+        sizeLabel.setIcon(new ImageIcon(getClass().getResource("/assets/icon/propertySizeIcon.png"))); 
         sizeLabel.setText(property.getSize()+" sq.ft");
         propertyInfoPanle.add(sizeLabel);
         sizeLabel.setBounds(438, 68, 165, 18);
 
-        priceLabel.setForeground(new java.awt.Color(190, 9, 9));
-        priceLabel.setFont(new java.awt.Font("Dialog", 3, 12));
+        priceLabel.setForeground(new Color(190, 9, 9));
+        priceLabel.setFont(new Font("Dialog", 3, 12));
         priceLabel.setText("RM "+property.getPrice());
         propertyInfoPanle.add(priceLabel);
         priceLabel.setBounds(62, 70, 124, 15);
 
-        cityLabel.setIcon(new ImageIcon(getClass().getResource("/assets/icon/locationIcon.png"))); // NOI18N
+        cityLabel.setIcon(new ImageIcon(getClass().getResource("/assets/icon/locationIcon.png"))); 
         cityLabel.setText(property.getPropertyLocation().getCity());
         propertyInfoPanle.add(cityLabel);
         cityLabel.setBounds(438, 17, 149, 18);
@@ -182,7 +183,7 @@ public class ViewProperty extends JPanel {
         add(titleLabel);
         titleLabel.setBounds(27, 322, 576, 25);
 
-        descriptionLabel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        descriptionLabel.setFont(new Font("Dialog", 1, 14)); 
         descriptionLabel.setText("Description");
         add(descriptionLabel);
         descriptionLabel.setBounds(12, 615, 143, 26);

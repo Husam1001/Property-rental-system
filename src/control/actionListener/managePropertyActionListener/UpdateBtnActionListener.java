@@ -16,7 +16,7 @@ public class UpdateBtnActionListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         System.out.println("Update Btn");
         UpdatePropertyView updateProperty=new UpdatePropertyView(property);
-        Mainprog.mainFrame.setSize(550,700);
+        Mainprog.mainFrame.setSize(550,660);
         Mainprog.mainFrame.getContentPane().removeAll();
         Mainprog.mainFrame.repaint();
         Mainprog.mainFrame.setLocationRelativeTo(null);
