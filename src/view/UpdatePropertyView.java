@@ -43,10 +43,8 @@ public class UpdatePropertyView extends JPanel {
     private JLabel titleLabel;
     private JTextField titleTextField;
     private final Property property;
-    // End of variables declaration
-    /**
-     * Creates new form AddProperty
-     */
+
+
     public UpdatePropertyView(Property property) {
         this.property=property;
         initComponents();

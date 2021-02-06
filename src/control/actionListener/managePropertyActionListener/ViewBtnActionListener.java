@@ -3,6 +3,7 @@ package control.actionListener.managePropertyActionListener;
 import control.Mainprog;
 import model.Property.Property;
 import view.ViewProperty;
+import view.ViewPropertyScullerPane;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,11 +17,11 @@ public class ViewBtnActionListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Mainprog.mainFrame.setSize(670, 960);
+        Mainprog.mainFrame.setSize(670, 600);
         Mainprog.mainFrame.getContentPane().removeAll();
         Mainprog.mainFrame.repaint();
         Mainprog.mainFrame.setLocationRelativeTo(null);
-        Mainprog.mainFrame.add(new ViewProperty(property));
+        Mainprog.mainFrame.add(new ViewPropertyScullerPane(new ViewProperty(property)));
 
     }
 }
